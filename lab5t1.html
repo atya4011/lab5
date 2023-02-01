@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <style>
+      .rotate {
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="text" class="rotate">Hello</h2>
+    <input type="text" id="input">
+    <button id="button">Replace</button>
+  </body>
+  <script>
+    const button = document.querySelector("#button");
+    const input = document.querySelector("#input");
+    const text = document.querySelector("#text");
+    button.addEventListener("click", function() {
+      text.innerHTML = input.value;
+    });
+  </script>
+</html>
